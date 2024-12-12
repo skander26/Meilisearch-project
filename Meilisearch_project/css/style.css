@@ -87,7 +87,7 @@ img {
 /* main */
 
 .main {
-  background: url(/Imgs/Showcase\ Cover.png) no-repeat center center/cover;
+  background: url('../Imgs/Showcase Cover.png') no-repeat center center/cover;
   min-height: 800px;
   border-radius: 0 0 50px 50px;
 }
@@ -538,10 +538,10 @@ footer {
 	overflow: hidden;
 	cursor: pointer;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
-	margin: auto;  
+	margin: auto;
   margin-top: -150px;
   }
-  
+
   .input {
   font-size: larger;
 	width: 1500px;

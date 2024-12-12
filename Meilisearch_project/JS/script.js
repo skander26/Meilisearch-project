@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", fetchAllDestinations);
 const searchBar = document.getElementById("input");
 const searchResults = document.getElementById("searchResults");
-const meiliSearchUrl = "https://ms-8a059a8ac49b-16123.lon.meilisearch.io";  
-const apiKey = "ef07f933bc528815d2fae4bba7eba2342b7c2f525baddd6239adefffead02841";  
+const meiliSearchUrl = "https://ms-8a059a8ac49b-16123.lon.meilisearch.io";
+const apiKey = "ef07f933bc528815d2fae4bba7eba2342b7c2f525baddd6239adefffead02841";
 
 async function searchDestinations() {
     const query = searchBar.value.trim();
@@ -20,7 +20,7 @@ async function searchDestinations() {
             },
             body: JSON.stringify({
                 q: query,
-                filter: "", 
+                filter: "",
             }),
         });
         if (!response.ok) {
@@ -86,13 +86,13 @@ function displayResults(results) {
       const resultItem = document.createElement('div');
       resultItem.classList.add('hotel-cards');
 
-      const imageSrc = `/images/${result.id}.jpeg`;
+      const imageSrc = `images/${result.id}.jpeg`;
       resultItem.innerHTML = `
           <img src="${result.image || imageSrc}" alt="${result.name}" width="320" height="380">
           <h5>${result.name}</h5>
-          <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> ${result.location}</h6>
+          <h6><img src="Imgs/icons/map-pin-line.png" alt=""> ${result.location}</h6>
           <div class="ratings">
-              <img src="/Imgs/icons/rating=5.png" alt="">
+              <img src="Imgs/icons/rating=5.png" alt="">
           </div>
       `;
 
@@ -102,7 +102,7 @@ function displayResults(results) {
 
 searchBar.addEventListener('input', function() {
     if (searchBar.value.trim() === "") {
-        fetchAllDestinations(); 
+        fetchAllDestinations();
     } else {
         searchDestinations();
     }
